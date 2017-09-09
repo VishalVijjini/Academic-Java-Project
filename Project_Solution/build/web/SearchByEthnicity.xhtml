@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Search By Ethnicity</title>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style type="text/css">
+            body {
+                
+                background-color: transparent;
+                background: url("Images/images (1).jpg");
+                background-repeat:no-repeat;
+                background-size: cover;
+                }
+                .navbar-default {
+            background-color: orange;
+            border-color: orange ;
+        }
+
+            .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+                color: orange;
+                background-color: orange;
+                background-size: cover;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+        <h:form class="form-horizontal">
+            <div class="form-group">
+                   <nav class="navbar navbar-default" style="height: 80px;">
+                       
+                       <h:commandButton class="btn btn-link" id="return" value="Return to Home " action="HomePage.xhtml" />                       
+                       <h:commandButton class="btn btn-link" id="search" value="Return to Search"  
+                                         action="Search.xhtml"  />
+                        
+                   </nav>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="ethnicity" class="col-sm-2 control-label">Ethnicity</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:selectOneMenu  class="col-sm-2"  value="#{login.loginpage.search_user.ethnicity}">
+                            
+                                <f:selectItem  itemValue="Pacific" itemLabel="Pacific"  />
+                                <f:selectItem  itemValue="Asian" itemLabel="Asian" />
+                                <f:selectItem  itemValue="African American" itemLabel="African American" />
+                                <f:selectItem  itemValue="White" itemLabel="White" />
+                                <f:selectItem  itemValue="American Indian" itemLabel="American Indian" />
+                            
+                           </h:selectOneMenu>
+                    </div>
+            </div>
+            
+            &nbsp;&nbsp;&nbsp;
+            <div class="form-group">
+                <h:outputLabel for="submit" class="col-sm-2 control-label"></h:outputLabel>
+                    <div class="col-md-10">
+                        <h:commandButton id="submit" type="submit" class="btn btn-success" value="Submit" action="#{login.loginpage.search_user.Ethnicity()}" >
+                            
+                        </h:commandButton>
+                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <h:dataTable class="table table-hover" id="searchByEthnicity" value="#{login.loginpage.search_user.ethnicitySearchList}" var="var1" rendered="#{login.loginpage.search_user.ethnicitySearchList.size() > 0}" >
+                            <h:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Select User"></h:outputText>
+                                </f:facet>
+                                <h:commandLink value="#{var1.friend_id}" action="#{login.loginpage.User_Profile(var1.friend_id)}"/>
+                            </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+         </h:form>
+        </div>
+    </h:body>
+    
+</html>
+

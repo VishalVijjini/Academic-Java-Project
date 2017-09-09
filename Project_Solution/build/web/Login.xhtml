@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style type="text/css">
+            body {
+                
+                background-color: transparent;
+                background: url("Images/images (1).jpg");
+                background-repeat:no-repeat;
+                background-size: cover;
+                }
+        </style>
+    </h:head>
+        <h:body>
+            <div class="container">
+                
+                <h:form class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <h:graphicImage class="img img-responsive" style=" width: 250px; margin-left: 250px "  value="Images/signup.gif" />
+                        </div>
+                        <div class="col-sm-10">
+                            <h:graphicImage class="img img-responsive" style=" width: 300px; margin-left: 250px "  value="Images/loginfix.jpg" />
+                        </div>
+
+                    </div>
+                        &nbsp;&nbsp;
+                        &nbsp;&nbsp;
+                        &nbsp;&nbsp;
+                        &nbsp;&nbsp;
+                        &nbsp;&nbsp;
+
+
+                    <div class="form-group">
+                        <h:outputLabel for="userid" class="col-sm-2 control-label">User Id</h:outputLabel>
+                            <div class="col-sm-10">
+                           <h:inputText class="form-control" id="userid" required="true" requiredMessage="id"
+                                        title="User Id" style=" width: 300px" value="#{login.user_id}">
+                           </h:inputText>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel for="password" class="col-sm-2 control-label">Password</h:outputLabel>
+                            <div class="col-sm-10">
+                                <h:inputSecret class="form-control" id="password" required="true" requiredMessage="password" 
+                                               title="Password" style=" width: 300px" value="#{login.password}">
+                                </h:inputSecret>
+                            </div>
+                    </div>
+
+                    &nbsp;&nbsp;&nbsp;
+                    <div class="form-group">
+                        <h:outputLabel for="location" class="col-sm-2 control-label"></h:outputLabel>
+                            <div class="col-md-10">
+                                <h:commandButton id="submit" type="submit" class="btn btn-success" value="Submit" action="#{login.login()}"/>
+                            </div>
+                    </div>
+
+                </h:form>
+                </div>
+    </h:body>
+</html>
+

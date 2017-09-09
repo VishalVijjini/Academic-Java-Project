@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+     <h:head>
+        <title>Online Dating System</title>
+        <meta http-equiv="pragma" content="no-cache"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style type="text/css">
+            body {
+                
+                background-color: transparent;
+                background: url("Images/images (1).jpg");
+                background-repeat:no-repeat;
+                background-size: cover;
+                }
+                .navbar-default {
+            background-color: orange;
+            border-color: orange ;
+        }
+
+            .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+                color: orange;
+                background-color: orange;
+                background-size: cover;
+            }
+        </style>
+        
+        <div class="col-sm-12">
+        
+                <h:form>
+                <nav class="navbar navbar-default" style="height: 80px;">
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <h1 style=" margin-left: 300px; color: salmon;  font-style: italic; font-weight: bold;  font-family: Bradley Hand ITC; ">Welcome User....</h1>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                       <img src="Images/images (1)_1.jpg" class="img-responsive" style="margin-top: 18px;" alt=""/>
+                        
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 25px; margin-right: 50px;">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><h:commandButton class="btn btn-link" id="search" value="Search" action="#{login.loginpage.Search()}" /></li>
+                            <li><h:commandButton class="btn btn-link" id="viewOnlineUsers" value="View Online Users" action="#{login.loginpage.OnlineUsers()}" /></li>
+                            <li><h:commandButton class="btn btn-link" id="viewFriendsList" value="View Friends List" action="#{login.loginpage.Friends_list()}" /></li>
+                            <li><h:commandButton class="btn btn-link" id="mypendinglist" value="My Pending List" action="#{login.loginpage.Pending_Requests()}" /></li>
+                            <li><h:commandButton class="btn btn-link" id="message" value="Messages" action="Message.xhtml" /></li>
+                            <li><h:commandButton class="btn btn-link" id="Aboutme" value="About Me" action="#{login.loginpage.My_Profile()}" /></li>
+                            <li><h:commandButton class="btn btn-link" id="LogOut" value="LogOut" action="#{login.loginpage.Logout()}" /></li>
+                            
+                        </ul>
+
+                    </div>
+                </nav>
+                    </h:form>
+            
+            </div>
+    </h:head>
+    
+    <h:body>
+        
+        <div class="container">
+            <h1 style="font-style: italic; font-weight: bold; font-family: Bradley Hand ITC; ">You fall in Love</h1>
+            <h1 style="font-style: italic; font-weight: bold; font-family: Bradley Hand ITC; ">With the most</h1>
+            <h1 style="font-style: italic; font-weight: bold; font-family: Bradley Hand ITC; ">Unexpected person</h1>
+            <h1 style="font-style: italic; font-weight: bold; font-family: Bradley Hand ITC; ">At the most</h1>
+            <h1 style="font-style: italic; font-weight: bold; font-family: Bradley Hand ITC; ">Unexpected time....</h1>
+           
+        </div>
+            
+    </h:body>
+</html>
+

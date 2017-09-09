@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Sign Up</title>
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="refresh"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style type="text/css">
+            body {
+                
+                background-color: transparent;
+                background: url("Images/images (1).jpg");
+                background-repeat:no-repeat;
+                background-size: cover;
+                }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+        <h:form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <h:graphicImage class="img img-responsive" style=" width: 500px; margin-left: 140px "  value="Images/sign_inGREY.gif" />
+                </div>
+                
+            </div>
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;
+                &nbsp;&nbsp;
+            <div class="form-group">
+                <h:outputLabel for="username" class="col-sm-2 control-label">User Name</h:outputLabel>
+                    <div class="col-sm-10">
+                   <h:inputText class="form-control" id="username" required="true" requiredMessage="Name"
+                                title="User Name" style=" width: 300px" value="#{signUp.user_name}">
+                   </h:inputText>
+                    </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="userid" class="col-sm-2 control-label">User Id</h:outputLabel>
+                    <div class="col-sm-10">
+                   <h:inputText class="form-control" id="userid" required="true" requiredMessage="id"
+                                title="User Id" style=" width: 300px" value="#{signUp.user_id}">
+                   </h:inputText>
+                    </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="password" class="col-sm-2 control-label">Password</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:inputSecret class="form-control" id="password" required="true" requiredMessage="password"
+                                       title="Password" style=" width: 300px" value="#{signUp.password}">
+                        </h:inputSecret>
+                    </div>
+            </div>
+            <div class="form-group">
+            
+                <h:outputLabel for="ethnicity" class="col-sm-2 control-label">Marital Status</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:selectOneRadio class="col-sm-4" value="#{signUp.maritalstatus}" required="true" >
+                                    <f:selectItem itemValue="Married" itemLabel="   Married"   />
+                                    <f:selectItem itemValue="Single" itemLabel="    Single" />
+                                    <f:selectItem itemValue="Divorced" itemLabel="    Divorced" />
+                                    <f:selectItem itemValue="Single Parent" itemLabel="   Single Parent" />
+                                </h:selectOneRadio>
+                    </div>
+            </div>
+            
+            <div class="form-group">
+                <h:outputLabel for="height" class="col-sm-2 control-label">Height</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:inputText class="form-control" id="height" required="true" requiredMessage="height"
+                                       title="Height" style=" width: 300px" value="#{signUp.height}">
+                        </h:inputText>
+                    </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="age" class="col-sm-2 control-label">Age</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:inputText class="form-control" id="age" required="true" requiredMessage="age"
+                                     title="Age" style=" width: 300px" value="#{signUp.age}">
+                        </h:inputText>
+                    </div>
+            </div>
+            <div class="form-group">
+            
+                <h:outputLabel for="ethnicity" class="col-sm-2 control-label">Ethnicity</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:selectOneMenu  class="col-sm-2" required="true" value="#{signUp.ethnicity}">
+                            
+                                <f:selectItem  itemValue="Pacific" itemLabel="Pacific"  />
+                                <f:selectItem  itemValue="Asian" itemLabel="Asian" />
+                                <f:selectItem  itemValue="African American" itemLabel="African American" />
+                                <f:selectItem  itemValue="White" itemLabel="White" />
+                                <f:selectItem  itemValue="American Indian" itemLabel="American Indian" />
+                            
+                           </h:selectOneMenu>
+                    </div>
+            </div>
+            <div class="form-group">
+            
+                <h:outputLabel for="intrest" class="col-sm-2 control-label">Interest's</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:selectManyCheckbox  class="col-sm-4" required="true" value="#{signUp.intrest}">
+                            <f:selectItem itemValue="Movies" itemLabel=" Movies" />
+                            <f:selectItem itemValue="Games" itemLabel=" Games" />
+                            <f:selectItem itemValue="Food" itemLabel=" Food" />
+                            <f:selectItem itemValue="Travel" itemLabel=" Travel" />
+                        </h:selectManyCheckbox>
+                    </div>
+            </div>
+            
+            <div class="form-group">
+                <h:outputLabel for="location" class="col-sm-2 control-label">Location</h:outputLabel>
+                    <div class="col-sm-10">
+                        <h:inputText class="form-control" id="location" required="true" requiredMessage="location"
+                                     title="Location" style=" width: 300px" value="#{signUp.location}">
+                        </h:inputText>
+                    </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div class="form-group">
+                <h:outputLabel for="location" class="col-sm-2 control-label"></h:outputLabel>
+                    <div class="col-md-10">
+                        <h:commandButton id="submit" type="submit" class="btn btn-success" value="Submit" action="confirmSignUp.xhtml"/>
+                    </div>
+            </div>
+            
+        </h:form>
+        </div>
+    </h:body>
+</html>
